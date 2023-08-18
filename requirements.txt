@@ -1,0 +1,11 @@
+qqq pip --progress-bar off
+datasets==2.12.0 --progress-bar off
+loralib==0.1.1 --progress-bar off
+einops==0.6.1 --progress-bar off
+bitsandbytes --progress-bar off
+transformers --progress-bar off @ git+https://github.com/huggingface/transformers.git --progress-bar off
+peft --progress-bar off @ git+https://github.com/huggingface/peft.git --progress-bar off
+accelerate --progress-bar off @ git+https://github.com/huggingface/accelerate.git --progress-bar off
+torch==2.0.1 --progress-bar off
+gradio
+sentencepiece

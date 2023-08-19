@@ -2,6 +2,7 @@
 <p align="center">
 <img src="https://github.com/Pareek-Yash/LLAMA-2-QLORA_FINETUNE/blob/main/assets/falcon_1.jpg?raw=true" alt="image" width="400" height="400" />
 </p>
+
 ```
 LLAMA-2-QLORA_FINETUNE/
 │

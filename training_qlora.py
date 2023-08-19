@@ -5,7 +5,7 @@ from transformers import (
     BitsAndBytesConfig
 )
 from peft import (
-    LoraConfig, 
+    LoraConfig,
     get_peft_model, 
     prepare_model_for_kbit_training
 )

@@ -1,23 +1,16 @@
 from peft import (
-    LoraConfig,
     PeftConfig,
     PeftModel,
-    get_peft_model,
-    prepare_model_for_kbit_training
 )
 from transformers import (
-    AutoConfig,
     AutoModelForCausalLM,
     AutoTokenizer,
-    BitsAndBytesConfig,
-    LlamaTokenizer,
-    StoppingCriteria,
-    StoppingCriteriaList,
-    TextIteratorStreamer
+
 )
 from config import get_generation_config, get_bnb_config
 import torch
-def load_model():
+
+def load_pretrained():
     PEFT_MODEL = "pareek-yash/falcon-7b-qlora-airport-chatbot"
 
     config = PeftConfig.from_pretrained(PEFT_MODEL)
@@ -32,6 +25,11 @@ def load_model():
     tokenizer.pad_token = tokenizer.eos_token
 
     model = PeftModel.from_pretrained(model, PEFT_MODEL)
+
+    return model, tokenizer
+
+
+
     
 def model_inference(model, tokenizer, input_text):
     """
@@ -54,19 +52,3 @@ def model_inference(model, tokenizer, input_text):
     
     decoded_output = tokenizer.decode(outputs[0], skip_special_tokens=True)
     return decoded_output
-
-
-prompt = f"""
-<human>: give me your airport's email address
-<assistant>:
-""".strip()
-
-encoding = tokenizer(prompt, return_tensors="pt").to(DEVICE)
-with torch.inference_mode():
-  outputs = model.generate(
-      input_ids=encoding.input_ids,
-      attention_mask=encoding.attention_mask,
-      generation_config=generation_config,
-  )
-
-print(tokenizer.decode(outputs[0], skip_special_tokens=True))

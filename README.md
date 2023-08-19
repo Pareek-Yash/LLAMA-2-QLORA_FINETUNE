@@ -1,6 +1,6 @@
 # LLAMA-2-QLORA_FINETUNE
 <p align="center">
-<img src="https://github.com/Pareek-Yash/LLAMA-2-QLORA_FINETUNE/blob/main/assets/falcon_1.png?raw=true" alt="image" width="400" height="400" />
+<img src="https://github.com/Pareek-Yash/LLAMA-2-QLORA_FINETUNE/blob/main/assets/falcon_1.png?raw=true" alt="image" width="400" height="350" />
 </p>
 
 ```

@@ -1,4 +1,7 @@
 # LLAMA-2-QLORA_FINETUNE
+<p align="center">
+<img src="https://github.com/Pareek-Yash/Multi-Entity-Extraction/blob/main/assets/images/Multi-Entity%20Extraction.png?raw=true" alt="image" width="400" height="400" />
+</p>
 ```
 LLAMA-2-QLORA_FINETUNE/
 │
